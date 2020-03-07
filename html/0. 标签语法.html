@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0. 标签语法</title>
+</head>
+<body>
+
+<!-- 标签不能交叉嵌套 -->
+正确：<div><span>早安，尚硅谷</span></div>
+<!--错误：<div><span>早安，尚硅谷</div></span>-->
+<hr />
+
+<!-- 标签必须正确关闭(闭合) -->
+正确：<div>早安，尚硅谷</div>
+<!--错误：<div>早安，尚硅谷-->
+<hr />
+
+<!-- 属性必须要有值，属性值必须加引号 -->
+正确：<font color="blue">早安，尚硅谷</font>
+错误：<font color=blue>早安，尚硅谷</font>
+错误：<font color>早安，尚硅谷</font>
+<hr />
+
+<!--注释不能嵌套-->
+正确：<!--注释内容-->
+<!--错误：&lt;!&ndash;注释内容 &lt;!&ndash;注释内容&ndash;&gt; &ndash;&gt;-->
+<hr />
+
+</body>
+</html>
