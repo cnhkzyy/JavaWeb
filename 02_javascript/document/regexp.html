@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //检查字符串中，是否包含字母e
+        //var patt = new RegExp("e");
+        //var patt = /e/;   //正则表达式的另一种写法
+        //alert(patt)
+
+        //检查字符串中是否包含a或b或c任意一个
+        //var patt = /[abc]/
+
+        //检查字符串，是否包含小写字母
+        //var patt = /[a-z]/
+
+        //检查字符串，是否包含大写字母
+        //var patt = /[A-Z]/
+
+
+        //检查字符串，是否包含数字
+        //var patt = /[0-9]/
+
+        //检查字符串，是否包含字母数字下划线
+        // var patt = /\w/
+
+        //检查字符串，是否包含至少一个a
+        //var patt = /a+/
+
+        //检查字符串，是否包含0或多个a
+        //var patt = /a*/
+
+        //检查字符串，是否包含0个或1个a
+        //var patt = /a?/
+
+        //检查字符串，是否包含连续3个a
+        //var patt = /a{3}/
+
+        //检查字符串，是否包含至少3个连续的a，最多5个联系的a
+        //var patt = /a{3,5}/
+
+        //检查字符串，是否包含至少3个连续的a
+        //var patt = /a{3}/
+
+        //检查字符串，字符串必须以a结尾
+        //var patt = /a$/
+
+        //检查字符串，字符串必须以a开头
+        //var patt = /^a/
+
+        //字符串从头到尾必须完全匹配
+        var patt = /^a{3,5}$/
+        var str = "aaaaaa";
+        alert(patt.test(str))
+    </script>
+</head>
+<body>
+
+</body>
+</html>
