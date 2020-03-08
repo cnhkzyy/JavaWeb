@@ -21,16 +21,22 @@
             /*
             test方法用于测试某个字符串，是不是匹配我的规则，符合返回true，不符合返回false
              */
+
+            var usernameSpan = document.getElementById("usernameSpan");
+            //innerHTML表示起始标签和结束标签中的内容
+            //alert(usernameSpan)
             if (patt.test(username)) {
-                alert("用户名合法!")
+                usernameSpan.innerHTML = '<img src="right.jpg" width="28" height="28">'
+
             } else {
-                alert("用户名不合法!")
+                usernameSpan.innerHTML = '<img src="wrong.jpg" width="28" height="28">'
             }
         }
     </script>
 </head>
 <body>
     用户名: <input type="text" id="username" value="xiaozhai"/>
+    <span id="usernameSpan" style="color: red"></span>
     <button onclick="onclickFun()">校验</button>
 
 </body>
