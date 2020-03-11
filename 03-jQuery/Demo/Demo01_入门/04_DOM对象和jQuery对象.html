@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../script/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var arr = [12, "abc", true]
+            var $btns = $("button")
+            alert(1)
+
+            for(var i = 0; i < $btns.length; i++) {
+                alert($btns[i])
+            }
+        })
+    </script>
+</head>
+<body>
+    <div id="testDiv">Atguigu is Very Good!</div>
+
+    <button id="dom2dom">使用DOM对象调用DOM方法</button>
+    <button id="dom2jQuery">使用DOM对象调用jQuery方法</button>
+    <button id="jQuery2jQuery">使用jQuery对象调用jQuery方法</button>
+    <button id="jQuery2dom">使用jQuery对象调用DOM方法</button>
+
+</body>
+</html>

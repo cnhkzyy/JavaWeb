@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../script/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            alert("页面加载完成之后，自动调用")
+
+
+            $("     <div>" +
+                "       <span>div-span1</span>" +
+                "       <span>div-span2</span>" +
+                "   </div>").appendTo("body")
+
+
+            alert($("button").length)
+
+            var btnObj = document.getElementById("btn01")
+            //alert(btnObj)
+            alert($(btnObj))
+
+        })
+
+    </script>
+</head>
+<body>
+    <div>
+        <span>div-span1</span>
+        <span>div-span2</span>
+        <button id="btn01">按钮1</button>
+        <button>按钮2</button>
+        <button>按钮3</button>
+
+    </div>
+
+</body>
+</html>
