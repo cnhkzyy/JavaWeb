@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../script/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //1. 对表单内可用input赋值操作
+            //val() 可以操作表单项的value属性值
+            //它可以设置和获取
+            $("#btn01").click(function () {
+                $(":text:enabled").val("我是万能的程序员")
+            })
+
+            //2. 对表单内不可用的input赋值操作
+            $("#btn02").click(function () {
+                $(":text:disabled").val("默认值")
+            })
+            
+            
+            //3. 获取多选框选中的个数，使用size()方法获取到的元素集合的元素个数
+            $("#btn03").click(function () {
+                alert($(":checkbox:checked").length)
+            })
+
+
+            
+        })
+    </script>
+</head>
+<body>
+    <h2>表单对象属性过滤选择器</h2>
+    <button id="btn01">对表单内可用input赋值操作</button>
+    <button id="btn02">对表单内不可用input赋值操作</button><br><br>
+    <button id="btn03">获取多选框中的个数</button>
+    <button id="btn04">获取多选框选中的内容</button><br><br>
+    <button id="btn05">获取下拉框选中的内容</button><br><br>
+
+    可用元素: <input type="text" value="可用文本框1"><br>
+    不可用元素: <input type="text" value="不可用文本框" disabled="disabled"><br>
+    可用元素: <input type="text" value="可用文本框2"><br>
+    不可用元素: <input type="text" value="不可用文本框" disabled="disabled"><br><br>
+
+    多选框:
+    <input type="checkbox" checked="checked">test1
+    <input type="checkbox">test2
+    <input type="checkbox">test3
+    <input type="checkbox" checked="checked">test4
+    <input type="checkbox">test5<br><br>
+
+    下拉列表1:
+    <select>
+        <option>浙江</option>
+        <option selected="selected">辽宁</option>
+        <option>北京</option>
+        <option selected="selected">天津</option>
+        <option>广州</option>
+        <option>湖北</option>
+    </select>
+    <br><br>
+    下拉列表2:
+    <select>
+        <option>浙江</option>
+        <option selected="selected">辽宁</option>
+        <option>北京</option>
+        <option selected="selected">天津</option>
+        <option>广州</option>
+        <option>湖北</option>
+    </select>
+
+
+</body>
+</html>
