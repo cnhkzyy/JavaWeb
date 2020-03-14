@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../script/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            alert("原生js的页面加载完成之后--1")
+
+        }
+
+        window.onload = function () {
+            alert("原生js的页面加载完成之后--2")
+
+        }
+
+
+        window.onload = function () {
+            alert("原生js的页面加载完成之后--3")
+
+        }
+
+
+        //全写
+        // $(document).ready(function () {
+        //
+        // })
+
+        //jquery的页面加载完成之后
+        $(function () {
+            alert("jquery的页面加载完成之后--1")
+        })
+
+        $(function () {
+            alert("jquery的页面加载完成之后--2")
+        })
+
+        $(function () {
+            alert("jquery的页面加载完成之后--3")
+        })
+    </script>
+</head>
+<body>
+    <button>我是按钮</button>
+    <iframe src="http://www.baidu.com"></iframe>
+    <img src="http://www.baidu.com/1.jpg" alt="test" />
+</body>
+</html>
