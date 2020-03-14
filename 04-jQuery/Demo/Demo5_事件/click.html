@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .head {
+            border: 2px solid greenyellow;
+            background-color: chartreuse;
+            width: 300px;
+            position: center;
+        }
+
+        .content {
+            display: none;
+        }
+
+
+    </style>
+    <script src="../../script/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            //传function是绑定时间
+            // $("h5").click(function () {
+            //     alert("h5单击事件 == click方法绑定")
+            // })
+
+            //使用live绑定的单击事件 ？？？没有这个方法了好像
+            // $("h5").live("click", function () {
+            //     alert("h5单击事件 == live方法绑定")
+            // })
+
+
+            $("<h5 class='head'>什么是jQuery?</h5>").appendTo( $("#panel"))
+
+
+            // //不传function是触发事件
+            // $("button").click(function () {
+            //     $("h5").click()
+            // })
+
+            //鼠标移入
+            // $("h5").mouseover(function () {
+            //     console.log("你进来了")
+            // })
+            //
+            // //鼠标移出
+            // $("h5").mouseout(function () {
+            //     console.log("你出去了")
+            // })
+
+
+            //使用bind绑定事件
+            // $("h5").bind("click mouseover mouseout", function () {
+            //     console.log("这是bind绑定的事件")
+            // })
+
+
+            //使用one绑定事件
+            // $("h5").one("click mouseover mouseout", function () {
+            //     console.log("这是one绑定的事件")
+            // })
+
+
+            //$("h5").unbind("click mouseover")   //什么都不传，全部解除绑定
+        })
+        
+    </script>
+</head>
+<body>
+    <div id="panel">
+        <h5 class="head">什么是jQuery?</h5>
+        <div class="content">
+            jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互
+        </div>
+        <button>按钮</button>
+    </div>
+</body>
+</html>
