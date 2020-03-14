@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../script/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //attr
+            // alert($(":checkbox:first").attr("name"))  //获取
+            // alert($(":checkbox:first").attr("name", "abc"))  //设置
+            //alert($(":checkbox").attr("checked"))   //没有checked属性值时返回undefined，有checked属性时返回checked。官方觉得返回undefined是个错误
+            //alert($(":checkbox").prop("checked"))   //没有checked属性值时返回false，选中时返回true
+            //希望都选中
+            //$(":checkbox").prop("checked", true)
+            //希望都不选中
+            //$(":checkbox").prop("checked", false)
+            $(":checkbox:first").attr("abc", "abcValue")
+            alert($(":checkbox:first").attr("abc"))
+        })
+
+    </script>
+</head>
+<body>
+
+    多选:
+    <input name="checkbox" type="checkbox" value="checkbox1" />checkbox1
+    <input name="checkbox" type="checkbox" value="checkbox2" />checkbox2
+
+</body>
+</html>
