@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #div1 {
+            border: solid 1px;
+            background-color: blue;
+            width: 400px;
+            height: 200px;
+            float: right;
+        }
+    </style>
+    <script src="../../../script/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            //显示:show()
+            $("#btn01").click(function () {
+                $("#div1").show(2000, function () {
+                    alert("show动画完成")
+                })
+            })
+
+
+            //隐藏:hide()
+            $("#btn02").click(function () {
+                $("#div1").hide(1000, function () {
+                    alert("hide动画完成")
+                })
+            })
+
+
+            //切换:toggle()
+            $("#btn03").click(function () {
+                $("#div1").toggle(1000, function () {
+                    alert("toggle动画完成")
+                })
+            })
+
+
+            // var abc = function () {
+            //     $("#div1").toggle(1000, abc)
+            // }
+            //
+            //
+            // abc()
+
+
+            //淡入
+            $("#btn04").click(function () {
+                $("#div1").fadeIn(2000, function () {
+                    alert("fadeIn完成")
+                })
+            })
+
+
+            //淡出
+            $("#btn05").click(function () {
+                $("#div1").fadeOut(2000, function () {
+                    alert("fadeOut完成")
+                })
+            })
+
+
+            //淡化到fadeTo
+            $("#btn06").click(function () {
+                $("#div1").fadeTo(2000, 0.5, function () {
+                    alert("fadeTo完成")
+                })
+            })
+
+
+            //淡化切换 fadeToggle
+            $("#btn07").click(function () {
+                $("#div1").fadeToggle(1000, function () {
+                    alert("fadeToggle完成")
+                })
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <table style="...">
+        <tr>
+            <td><button id="btn01">显示show()</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn02">隐藏hide()</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn03">显示/隐藏切换 toggle()</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn04">淡入fadeIn()</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn05">淡出fadeOut()</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn06">淡化到fadeTo()</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn07">淡入切换到fadeToggle()</button></td>
+        </tr>
+    </table>
+
+    <div id="div1" style="...">
+        jquery动画定义了很多种动画效果，可以很方便的使用这些动画效果
+    </div>
+
+</body>
+</html>
