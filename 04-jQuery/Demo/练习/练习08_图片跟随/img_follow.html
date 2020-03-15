@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+
+        #small {
+            margin-top: 30px;
+            width: 70px;
+            height: 50px;
+        }
+
+        #showBig {
+            position: absolute;
+            display: none;
+        }
+
+
+        #showBig img {
+            width: 100px;
+            height: 80px;
+        }
+    </style>
+    <script src="../../../script/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $("#small").bind("mouseover mouseout mousemove", function (event) {
+                if (event.type == "mouseover") {
+                    $("#showBig").show()
+                } else if (event.type == "mouseout") {
+                    $("#showBig").hide()
+                } else if (event.type == "mousemove") {
+                    console.log(event)
+                    $("#showBig").offset({
+                        left: event.pageX +10,
+                        top: event.pageY + 10
+                    })
+                }
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+
+    <img id="small" src="big.jpg" />
+
+    <div id="showBig">
+        <img src="big.jpg">
+    </div>
+
+</body>
+</html>
