@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<books>
+    <book sn="SN12346757">
+        <name>高等数学</name>
+        <price>9.9</price>
+        <author>李老师</author>
+    </book>
+    <book sn="SN12346759">
+        <name>英语</name>
+        <price>29.9</price>
+        <author>王老师</author>
+    </book>
+</books>
