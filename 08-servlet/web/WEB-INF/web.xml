@@ -39,6 +39,20 @@
     <servlet>
         <servlet-name>HelloServlet2</servlet-name>
         <servlet-class>com.atguigu.servlet.HelloServlet2</servlet-class>
+
+        <!--init-param是初始化参数-->
+        <init-param>
+            <!--param-name是参数名-->
+            <param-name>username</param-name>
+            <!--param-value是参数值-->
+            <param-value>root2</param-value>
+        </init-param>
+        <init-param>
+            <!--param-name是参数名-->
+            <param-name>url</param-name>
+            <!--param-value是参数值-->
+            <param-value>jdbc:mysql://localhost:3306/test2</param-value>
+        </init-param>
     </servlet>
     <servlet>
         <servlet-name>HelloServlet3</servlet-name>
