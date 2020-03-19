@@ -1,6 +1,7 @@
 package com.atguigu.servlet;
 
 import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
@@ -34,7 +35,39 @@ public class HelloServlet implements Servlet {
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
         System.out.println("3. service = = = Hello Servlet 被访问了");
+
+        //类型转换，因为它有getMethod()方法
+        HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
+        //获取请求的方式
+        String method = httpServletRequest.getMethod();
+//        System.out.println(method);
+
+
+        if ("GET".equals(method)) {
+            doGet();
+        } else if ("POST".equals(method)) {
+            doPost();
+        }
     }
+
+
+    /**
+     * 做get请求的操作
+     */
+    public void doGet() {
+        System.out.println("get请求");
+        System.out.println("get请求");
+    }
+
+
+    /**
+     * 做post请求的操作
+     */
+    public void doPost() {
+        System.out.println("post请求");
+        System.out.println("post请求");
+    }
+
 
     @Override
     public String getServletInfo() {
