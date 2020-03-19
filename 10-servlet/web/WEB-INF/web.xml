@@ -7,9 +7,17 @@
         <servlet-name>RequestAPIServlet</servlet-name>
         <servlet-class>com.atguigu.servlet.RequestAPIServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ParameterServlet</servlet-name>
+        <servlet-class>com.atguigu.servlet.ParameterServlet</servlet-class>
+    </servlet>
     
     <servlet-mapping>
         <servlet-name>RequestAPIServlet</servlet-name>
         <url-pattern>/requestAPIServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ParameterServlet</servlet-name>
+        <url-pattern>/parameterServlet</url-pattern>
     </servlet-mapping>
 </web-app>
