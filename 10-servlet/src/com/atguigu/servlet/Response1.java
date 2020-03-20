@@ -19,14 +19,17 @@ public class Response1 extends HttpServlet {
         req.setAttribute("key1", "value1");
 
         //设置响应状态码302，表示重定向（已搬迁）
-        resp.setStatus(302);
+        //resp.setStatus(302);
 
         //设置响应头，说明新的地址在哪里
-        resp.setHeader("Location", "http://localhost:8099/10_servlet_war_exploded/response2");
+        //resp.setHeader("Location", "http://localhost:8099/10_servlet_war_exploded/response2");
         //浏览器不能访问WB-INF
         //resp.setHeader("Location", "http://localhost:8099/10_servlet_war_exploded/WEB-INF/form.html");
         //可以访问工程外的资源
         //resp.setHeader("Location", "http://www.baidu.com");
 
+
+        //方案二，推荐使用
+        resp.sendRedirect("http://localhost:8099/10_servlet_war_exploded/response2");
     }
 }
