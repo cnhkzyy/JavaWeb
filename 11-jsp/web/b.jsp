@@ -68,6 +68,42 @@ errorPage表示错误后自动跳转去的路径
     <%=map %><br>
     <%=request.getParameter("username")%><br>
 
+<%--练习：
+1. 代码脚本--if语句
+2. 代码脚本--for循环语句
+3. 翻译后java文件中_jspService方法内的代码都可以写
+--%>
+
+    <%
+        int i = 13;
+        if (i == 12) {
+    %>
+                <h1>等于12!</h1>
+    <%
+        } else {
+    %>
+                <h1>不等于12!</h1>
+    <%
+        }
+    %>
+<table border="1" cellspacing="0">
+    <%
+        for (int j = 0; j < 10; j++) {
+    %>
+        <tr>
+            <td>第 <%=j+1%> 行</td>
+        </tr>
+    <%=j%><br>
+
+    <%
+        }
+    %>
+</table>
+
+    <%
+        String username = request.getParameter("username");
+        System.out.println("用户名的请求参数值是: " + username);
+    %>
 
 
 </body>
