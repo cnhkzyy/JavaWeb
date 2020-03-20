@@ -7,7 +7,7 @@ package com.atguigu.pojo;
 public class User {
 
     private Integer id;
-    private String name;
+    private String username;
     private String password;
     private String email;
 
@@ -16,8 +16,8 @@ public class User {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
     public String getPassword() {
@@ -32,8 +32,8 @@ public class User {
         this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public void setPassword(String password) {
@@ -49,7 +49,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 '}';
@@ -62,9 +62,9 @@ public class User {
 
 
     //有参构造函数
-    public User(Integer id, String name, String password, String email) {
+    public User(Integer id, String username, String password, String email) {
         this.id = id;
-        this.name = name;
+        this.username = username;
         this.password = password;
         this.email = email;
     }

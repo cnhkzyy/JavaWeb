@@ -47,7 +47,7 @@ public abstract class BaseDao {
     public <T> T queryForOne(Class<T> type, String sql, Object ... args) {
         Connection conn = JdbcUtils.getConnection();
         try {
-            queryRunner.query(conn, sql, new BeanHandler<T>(type), args);
+            return queryRunner.query(conn, sql, new BeanHandler<T>(type), args);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -68,7 +68,7 @@ public abstract class BaseDao {
     public <T> List<T> queryForList(Class<T> type, String sql, Object ... args) {
         Connection conn = JdbcUtils.getConnection();
         try {
-            queryRunner.query(conn, sql, new BeanListHandler<T>(type), args);
+            return queryRunner.query(conn, sql, new BeanListHandler<T>(type), args);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -84,7 +84,7 @@ public abstract class BaseDao {
      * @param args sql对于的参数值
      * @return
      */
-    public Object queryForSingleValueSt(String sql, Object ... args) {
+    public Object queryForSingleValue(String sql, Object ... args) {
 
         Connection conn = JdbcUtils.getConnection();
         try {
