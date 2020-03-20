@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@page import="java.util.Map" %>
+<%@ page import="java.util.HashMap" %>
 <%@ page contentType="text/html;charset=utf-8"
          errorPage="/error500.jsp"
          isErrorPage="true"
@@ -21,6 +22,39 @@ errorPage表示错误后自动跳转去的路径
     <title>Title</title>
 </head>
 <body>
-    b.jsp页面
+<%--练习：
+1. 声明类的属性
+--%>
+    <%!
+        private Integer id;
+        private String name;
+        private static Map<String, Object> map;
+    %>
+
+<%-- 2. 声明static静态代码块--%>
+    <%!
+        static {
+            map = new HashMap<String, Object>();
+            map.put("key1", "value1");
+            map.put("key2", "value2");
+            map.put("key3", "value3");
+        }
+    %>
+
+<%--3. 声明类的方法 --%>
+    <%!
+        public int abc() {
+            return 12;
+        }
+    %>
+
+<%--4. 生成内部类--%>
+
+    <%!
+        public static class A {
+            private Integer id = 12;
+            private String abc = "abc";
+        }
+    %>
 </body>
 </html>
