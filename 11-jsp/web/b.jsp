@@ -56,5 +56,19 @@ errorPage表示错误后自动跳转去的路径
             private String abc = "abc";
         }
     %>
+
+<%--1. 练习：输出整型
+2. 输出浮点型
+3. 输出字符串
+4. 输出对象
+--%>
+    <%=12 %><br>
+    <%=12.12 %><br>
+    <%="我是字符串" %><br>
+    <%=map %><br>
+    <%=request.getParameter("username")%><br>
+
+
+
 </body>
 </html>
