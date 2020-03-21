@@ -12,6 +12,6 @@
 </head>
 <body>
     页脚信息<br>
-    改一下
+    改一下<%=request.getParameter("username")%>
 </body>
 </html>
