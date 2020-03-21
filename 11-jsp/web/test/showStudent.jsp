@@ -1,5 +1,5 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.atguigu.servlet.pojo.Student" %>
+<%@ page import="com.atguigu.pojo.Student" %>
 <%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: beck
@@ -27,11 +27,7 @@
     练习二：jsp输出一个表格，里面有10个学生的信息
     --%>
     <%
-        List<Student> studentList = new ArrayList<Student>();
-        for(int i = 0; i < 10; i++) {
-            int t = i + 1;
-            studentList.add(new Student(t, "name" + t, 18 + t, "phone" + t));
-        }
+        List<Student> studentList = (List<Student>) request.getAttribute("stuList");
     %>
     <table>
         <tr>

@@ -1,4 +1,4 @@
-package com.atguigu.servlet.pojo;
+package com.atguigu.pojo;
 
 /**
  * Author beck

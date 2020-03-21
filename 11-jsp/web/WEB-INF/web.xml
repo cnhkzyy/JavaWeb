@@ -8,9 +8,17 @@
         <servlet-name>PrintHtml</servlet-name>
         <servlet-class>com.atguigu.servlet.PrintHtml</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SearchStudentServlet</servlet-name>
+        <servlet-class>com.atguigu.servlet.SearchStudentServlet</servlet-class>
+    </servlet>
     
     <servlet-mapping>
         <servlet-name>PrintHtml</servlet-name>
         <url-pattern>/printHtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchStudentServlet</servlet-name>
+        <url-pattern>/searchStudentServlet</url-pattern>
     </servlet-mapping>
 </web-app>
