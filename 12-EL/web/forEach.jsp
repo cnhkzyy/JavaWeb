@@ -1,3 +1,5 @@
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Map" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -26,5 +28,37 @@
             </tr>
         </c:forEach>
     </table>
+    <hr>
+    <%--2. 遍历Object数组
+        for(Object : arr)
+        items表示遍历的数据源（遍历的集合）
+        var表示当前遍历到的数据
+        --%>
+
+    <%
+        request.setAttribute("arr", new String[] {"123456", "234567", "3456789"});
+    %>
+    <c:forEach items="${requestScope.arr}" var="item">
+        ${item}<br>
+    </c:forEach>
+    <hr>
+    <%
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("key1", "value1");
+        map.put("key2", "value2");
+        map.put("key3", "value3");
+        request.setAttribute("map", map);
+       /* for (Map.Entry<String, Object> entry: map.entrySet()) {
+
+        }*/
+
+    %>
+    <c:forEach items="${requestScope.map}" var="entry">
+        <h1>${entry.key}</h1>          <%--调用getKey方法--%>
+        <h1>${entry.value}</h1>        <%--调用getValue方法--%>
+        <h1>${entry.key} = ${entry.value}</h1>
+
+    </c:forEach>
+
 </body>
 </html>
